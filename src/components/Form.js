@@ -12,7 +12,8 @@ function Form() {
       className="form-control mr-sm-2" 
       type="text" 
       placeholder="Search employee" 
-      aria-label="Search">
+      id="Search"
+      >
       </input>
     </form>
   </nav>

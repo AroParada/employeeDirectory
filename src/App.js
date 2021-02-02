@@ -1,15 +1,13 @@
-import React from "react";
-import Navbar from "./components/Navbar";
-import Card from "./components/Card";
-import Form from "./components/Form";
-import API from "./utils/API";
+import Search from "./pages/Search"
+
+
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <Form />
-      <Card />
+   
+    <div className="app">
+      <Search />
+
     </div>
   );
 }
@@ -17,10 +15,6 @@ function App() {
 export default App;
 
 
-  API.getRandomUsers()
-  console.log(API)
-    // .then(res => this.setState({ randomUser: res.data.message }))
-    // .catch(err => console.log(err));
 
 
 
