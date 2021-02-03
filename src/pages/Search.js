@@ -4,22 +4,19 @@ import Navbar from "../components/Navbar";
 import Form from "../components/Form";
 import SearchResults from "../components/SearchResults";
 import Wrapper from "../components/Wrapper";
+import { Table } from 'reactstrap';
 
 class Search extends Component {
   state = {
-    search: "",
     results: [],
+    search: "",
   };
 
   componentDidMount() {
-    this.getRandomUsers();
+    API.getRandomUsers()
+    .then(res => this.setState({ results: res.data.results }))
+    .catch(err => console.log(err));
   };
-
-  // getRandomUsers = query => {
-  //   API.getRandomUsers(query)
-  //     .then(res => this.setState({ results: res.data.data }))
-  //     .catch(err => console.log(err));
-  // };
 
   handleInputChange = event => {
     const name = event.target.name;
@@ -29,28 +26,29 @@ class Search extends Component {
     });
   };
 
-  handleFormSubmit = event => {
-    event.preventDefault();
-    this.getRandomUsers(this.state.search);
-  };
-
   render() {
     return (
     <div>
       <Navbar />
       <Form />
       <Wrapper>
-        
-
+      <Table>
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th>DOB</th>
+        </tr>
+      </thead>
+      <tbody>
+        <SearchResults
+         results = {this.state.results} />
+      </tbody>
+    </Table>
       </Wrapper>
-      
-
     </div>
-
-
-      
-    
-
     )}
 }
 

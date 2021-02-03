@@ -1,6 +1,6 @@
 import React from "react";
 
-function Navbar() {
+function Navbar(props) {
   return (
 <div className="jumbotron jumbotron-fluid">
     <div className="container">
