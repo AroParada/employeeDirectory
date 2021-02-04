@@ -19,19 +19,20 @@ class Search extends Component {
     .catch(err => console.log(err));
   };
   
-  // handleInputChange = event => {
-  //   const name = event.target.name;
-  //   const value = event.target.value;
-  //   this.setState({
-  //     [name]: value
-  //   });
-  // };
+  handleInputChange = event => {
+    const name = event.target.name;
+    const value = event.target.value;
+    this.setState({
+      [name]: value
+    });
+  };
 
   render() {
     return (
     <div>
       <Navbar />
-      <Form />
+      <Form
+       handleInputChange = {this.handleInputChange}/>
       <Wrapper>
       <Table>
       <thead>

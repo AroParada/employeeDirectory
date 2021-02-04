@@ -7,7 +7,7 @@ function Navbar(props) {
   <div className="row">
       <div className="col">
       <h2>
-      Employee Directory
+      Employee Directory 📑
   </h2>
     </div>
   </div>
