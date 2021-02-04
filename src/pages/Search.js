@@ -14,17 +14,18 @@ class Search extends Component {
 
   componentDidMount() {
     API.getRandomUsers()
+    // console.log(API.getRandomUsers())
     .then(res => this.setState({ results: res.data.results }))
     .catch(err => console.log(err));
   };
-
-  handleInputChange = event => {
-    const name = event.target.name;
-    const value = event.target.value;
-    this.setState({
-      [name]: value
-    });
-  };
+  
+  // handleInputChange = event => {
+  //   const name = event.target.name;
+  //   const value = event.target.value;
+  //   this.setState({
+  //     [name]: value
+  //   });
+  // };
 
   render() {
     return (

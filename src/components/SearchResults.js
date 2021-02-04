@@ -4,18 +4,26 @@ import React from 'react';
 const SearchResults = (props) => {
   console.log(props)
   return (
-    <div>
+    <tr>
     {props.results.map((employee, index) => {
+      const {
+        dob: {date, age},
+        email,
+        name: {title, first, last},
+        phone,
+      } = employee;
+
+
       return (
         <tr key={index}>
           <img alt={employee.results} className="img-fluid" src={props.src} />
-          <td> {employee.name} </td>
-          <td> {employee.phone} </td>
-          <td> {employee.email} </td>
-          <td> {employee.dob} </td>
+          <td>{[title, first, last].join(' ')}</td>
+          <td> {phone} </td>
+          <td> {email} </td>
+          <td> {[date, age].join(' ')} </td>
       </tr>
     )})}
-  </div>
+  </tr>
   
   );
 }
