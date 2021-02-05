@@ -29,6 +29,25 @@ class Search extends Component {
     });
   };
 
+  sortByLastName = () => {
+    const sortedEmployees = this.state.results.sort((a, b) => {
+      if (b.name.last > a.name.last) {
+        return -1
+      }
+      if (a.name.last > b.name.last) {
+        return 1
+      }
+      return 0;
+    });
+    if (this.state.sortOrder === "descending") {
+      sortedEmployees.reverse();
+      this.setState({ sortOrder: "ascending" });
+    } else {
+      this.setState({ sortOrder: "descending" });
+    }
+    this.setState({ results: sortedEmployees })
+}
+
   render() {
     return (
     <div>
@@ -40,7 +59,7 @@ class Search extends Component {
       <thead>
         <tr>
           <th>Image</th>
-          <th>Name<span className="downArrow" onClick={this.sortByLName}></span></th>
+          <th>Name<span className="downArrow" onClick={this.sortByLastName}></span></th>
           <th>Phone</th>
           <th>Email</th>
           <th>DOB</th>
