@@ -22,7 +22,7 @@ const SearchResults = (props) => {
           <td>{[first, last].join(' ')}</td>
           <td> {phone} </td>
           <td> {email} </td>
-          <td> {[date].join(' ')} </td>
+          <td> {[date.slice(0, 10)].join(' ')} </td>
       </tr>
     )})}
     </>
