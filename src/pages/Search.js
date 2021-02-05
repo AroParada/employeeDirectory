@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Form from "../components/Form";
 import SearchResults from "../components/SearchResults";
 import Wrapper from "../components/Wrapper";
+import '../styles/table.css';
 import { Table } from 'reactstrap';
 
 class Search extends Component {
@@ -20,6 +21,7 @@ class Search extends Component {
   };
   
   handleInputChange = event => {
+    event.preventDefault();
     const name = event.target.name;
     const value = event.target.value;
     this.setState({
@@ -38,7 +40,7 @@ class Search extends Component {
       <thead>
         <tr>
           <th>Image</th>
-          <th>Name</th>
+          <th>Name<span className="downArrow" onClick={this.sortByLName}></span></th>
           <th>Phone</th>
           <th>Email</th>
           <th>DOB</th>

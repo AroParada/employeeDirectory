@@ -6,7 +6,7 @@ function Form(props) {
         <form className="form-inline" htmlFor="search">Search:
         <input
           onChange={props.handleInputChange}
-          value={props.value}
+          value={props.search}
           name="search"
           type="text"
           className="form-control mr-sm-2"
