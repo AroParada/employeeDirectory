@@ -12,7 +12,7 @@ An employee directory with React components, manages component state, and respon
 
 An employee or manager would benefit greatly from being able to view non-sensitive data about other employees. It would be particularly helpful to be able to filter employees by name.
 
-## Acceptance Criteria
+## Criteria
 
 Given a table of random users generated from the [Random User API](https://randomuser.me/), when the user loads the page, a table of employees should render. 
 
@@ -22,14 +22,9 @@ The user should be able to:
 
   * Filter the users by at least one property.
 
-* Deploy this site to GitHub Pages using the [Create React App docs for deployment.](https://create-react-app.dev/docs/deployment/#github-pages)
+## Screenshot and Deployed link
 
-* **Important**: Be sure to push your codebase to GitHub and **NOT** your built and deployed code. Ensure this happens by following the above instructions and using the `gh-pages` branch to host the deployed application's code.
+<img src="public\Screenshot (151).png">
 
-## Submission on BCS
-
-You are required to submit the following:
-
-* the URL to the deployed application
-
-* the URL to the Github repository
+### Contact 
+haroldparada20@gmail.com
