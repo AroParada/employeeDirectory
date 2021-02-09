@@ -21,13 +21,15 @@ class Search extends Component {
   };
   
   handleInputChange = event => {
-    event.preventDefault();
-    const name = event.target.name;
-    const value = event.target.value;
-    this.setState({
-      [name]: value
-    });
-  };
+    console.log("new value",event.target.value);
+    if (event.target.name === "search") {
+      // console.log("this is search")
+      const searchTerm = event.target.value;
+      this.setState({
+        search: searchTerm
+      })
+    }
+  }
 
   sortByLastName = () => {
     const sortedEmployees = this.state.results.sort((a, b) => {
@@ -53,7 +55,7 @@ class Search extends Component {
     <div>
       <Navbar />
       <Form
-       handleInputChange = {this.handleInputChange}/>
+       handleInputChange = {this.handleInputChange}w/>
       <Wrapper>
       <Table>
       <thead>
