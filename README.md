@@ -24,5 +24,5 @@ The user should be able to:
 
 <img src="Screenshot (151).png">
 
-### Contact 
+### Contact for questions
 haroldparada20@gmail.com
