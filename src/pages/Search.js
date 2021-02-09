@@ -24,7 +24,7 @@ class Search extends Component {
     console.log("new value",event.target.value);
     if (event.target.name === "search") {
       // console.log("this is search")
-      const searchTerm = event.target.value;
+      const searchTerm = event.target.value.toLowerCase();
       this.setState({
         search: searchTerm
       })
@@ -55,7 +55,7 @@ class Search extends Component {
     <div>
       <Navbar />
       <Form
-       handleInputChange = {this.handleInputChange}w/>
+       handleInputChange = {this.handleInputChange}/>
       <Wrapper>
       <Table>
       <thead>
