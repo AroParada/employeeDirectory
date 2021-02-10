@@ -35,7 +35,7 @@ class Search extends Component {
   }
 
   sortByLastName = () => {
-    const sortedEmployees = this.state.results.sort((a, b) => {
+    const sortedEmployees = this.state.filteredResults.sort((a, b) => {
       if (b.name.last > a.name.last) {
         return -1
       }
@@ -51,6 +51,7 @@ class Search extends Component {
       this.setState({ sortOrder: "descending" });
     }
     this.setState({ results: sortedEmployees })
+    
 }
 
   render() {
