@@ -10,25 +10,28 @@ import { Table } from 'reactstrap';
 class Search extends Component {
   state = {
     results: [],
+    filteredResults: [],
     search: "",
   };
 
   componentDidMount() {
     API.getRandomUsers()
     // console.log(API.getRandomUsers())
-    .then(res => this.setState({ results: res.data.results }))
+    .then(res => this.setState({ filteredResults: res.data.results ,results: res.data.results }))
     .catch(err => console.log(err));
   };
   
   handleInputChange = event => {
     console.log("new value",event.target.value);
-    if (event.target.name === "search") {
-      // console.log("this is search")
-      const searchTerm = event.target.value.toLowerCase();
-      this.setState({
-        search: searchTerm
-      })
-    }
+//     if (event.target.name === "search") {
+//       const filteredList = this.state.results.filter(item => {
+//     return item.name.first.toLowerCase().includes(searchTerm)
+//         || item.name.last.toLowerCase().includes(searchTerm);
+// });
+      // this.setState({
+      //   filteredResults: filteredList
+      // })
+    // }
   }
 
   sortByLastName = () => {
@@ -69,7 +72,7 @@ class Search extends Component {
       </thead>
       <tbody>
         <SearchResults
-         results = {this.state.results} />
+         results = {this.state.filteredResults} />
       </tbody>
     </Table>
       </Wrapper>
