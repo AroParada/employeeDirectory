@@ -22,7 +22,7 @@ The user should be able to:
 
 (DEPLOYMENT)[https://aroparada.github.io/employeedirectory/]
 
-<img src="Screenshot (151).png">
+<img src="src\assets\Screenshot (151).png">
 
 ### Contact for questions
 haroldparada20@gmail.com
