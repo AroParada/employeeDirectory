@@ -23,15 +23,15 @@ class Search extends Component {
   
   handleInputChange = event => {
     console.log("new value",event.target.value);
-//     if (event.target.name === "search") {
-//       const filteredList = this.state.results.filter(item => {
-//     return item.name.first.toLowerCase().includes(searchTerm)
-//         || item.name.last.toLowerCase().includes(searchTerm);
-// });
-      // this.setState({
-      //   filteredResults: filteredList
-      // })
-    // }
+    if (event.target.name === "search") {
+      const filteredList = this.state.results.filter(item => {
+    return item.name.first.toLowerCase().includes(event.target.value)
+        || item.name.last.toLowerCase().includes(event.target.value);
+});
+      this.setState({
+        filteredResults: filteredList
+      })
+    }
   }
 
   sortByLastName = () => {
